@@ -71,21 +71,116 @@ export default {
   @apply w-full h-[580px] flex flex-col justify-start items-center p-[40px];
 }
 .serviceBox.box01{
-  @apply bg-[url('https://www.apple.com/v/home/bo/images/promos/college-students/promo_college_students__bxqdcoxgjzw2_large.jpg')] bg-center justify-end;
+  @apply bg-[url('https://www.apple.com/v/home/bo/images/promos/college-students/promo_college_students__bxqdcoxgjzw2_large.jpg')] bg-center justify-end bg-no-repeat;
 }
 .serviceBox.box02{
-  @apply bg-[url('https://www.apple.com/v/home/bo/images/promos/macbook-air-m3/promo_macbook_air_m3__e43jegok3wuq_large.jpg')] bg-center;
+  @apply bg-[url('https://www.apple.com/v/home/bo/images/promos/macbook-air-m3/promo_macbook_air_m3__e43jegok3wuq_large.jpg')] bg-center bg-no-repeat;
 }
 .serviceBox.box03{
-  @apply bg-[url('https://www.apple.com/kr/home/bo/images/promos/apple-watch-series-9/promo_apple_watch_series_9_order__b3u85rm9zf6u_large.jpg')] bg-center;
+  @apply bg-[url('https://www.apple.com/kr/home/bo/images/promos/apple-watch-series-9/promo_apple_watch_series_9_order__b3u85rm9zf6u_large.jpg')] bg-center bg-no-repeat;
 }
 .serviceBox.box04{
-  @apply bg-[url('https://www.apple.com/v/home/bo/images/promos/ipad-air/promo_ipadair__cu1bnxi7uuwm_large.jpg')] bg-center;
+  @apply bg-[url('https://www.apple.com/v/home/bo/images/promos/ipad-air/promo_ipadair__cu1bnxi7uuwm_large.jpg')] bg-center bg-no-repeat;
 }
 .serviceBox.box05{
-  @apply bg-[url('https://www.apple.com/v/home/bo/images/promos/app-store-squad-busters/promo_app_store_sb__b8zuxx50qely_large.jpg')] bg-center;
+  @apply bg-[url('https://www.apple.com/v/home/bo/images/promos/app-store-squad-busters/promo_app_store_sb__b8zuxx50qely_large.jpg')] bg-center bg-no-repeat;
 }
 .serviceBox.box06{
-  @apply bg-[url('https://www.apple.com/v/home/bo/images/promos/iphone-tradein/promo_iphone_tradein__bugw15ka691e_large.jpg')] bg-center;
+  @apply bg-[url('https://www.apple.com/v/home/bo/images/promos/iphone-tradein/promo_iphone_tradein__bugw15ka691e_large.jpg')] bg-center bg-no-repeat;
+}
+.serviceBox .title {
+  @apply text-[40px] text-[#fff] font-bold mb-[4px];
+}
+.serviceBox .title img{
+  @apply mb-[10px];
+}
+.serviceBox .title img.largeImg{
+  @apply block;
+}
+.serviceBox .title img.mediumImg{
+  @apply hidden;
+}
+.serviceBox .txt {
+  @apply text-[21px] mb-[15px] text-[#fff] font-normal text-center;
+}
+.serviceBox:nth-child(2n) .title,
+.serviceBox:nth-child(2n) .txt {
+  @apply text-[#1d1d1f];
+}
+.serviceBox .btnGroup {
+  @apply flex justify-center items-center gap-[10px];
+}
+.serviceBox .btnGroup button {
+  @apply text-[#2997ff] font-normal border border-[#2997ff] rounded-[30px] text-[14px] p-[7px_15px] first:text-[#fff] first:bg-[#0071e3] first:border-[#0071e3];
+}
+.serviceBox.box05 .btnGroup button {
+  @apply bg-[#fff] text-[#1d1d1f]
+}
+@media (max-width: 1068px) {
+  .serviceBox{
+    @apply !h-[490px];
+  }
+  .serviceBox .title {
+    @apply !text-[32px];
+  }
+  .serviceBox .txt{
+    @apply !text-[19px];
+  }
+  .serviceBox .title img.largeImg{
+    @apply hidden;
+  }
+  .serviceBox .title img.mediumImg{
+    @apply block;
+  }
+  .serviceBox.box01{
+    @apply !bg-[url('https://www.apple.com/v/home/bo/images/promos/college-students/promo_college_students__bxqdcoxgjzw2_medium.jpg')];
+  }
+  .serviceBox.box02{
+    @apply !bg-[url('https://www.apple.com/v/home/bo/images/promos/macbook-air-m3/promo_macbook_air_m3__e43jegok3wuq_medium.jpg')];
+  }
+  .serviceBox.box03{
+    @apply !bg-[url('https://www.apple.com/kr/home/bo/images/promos/apple-watch-series-9/promo_apple_watch_series_9_order__b3u85rm9zf6u_medium.jpg')];
+  }
+  .serviceBox.box04{
+    @apply !bg-[url('https://www.apple.com/v/home/bo/images/promos/ipad-air/promo_ipadair__cu1bnxi7uuwm_medium.jpg')];
+  }
+  .serviceBox.box05{
+    @apply !bg-[url('https://www.apple.com/v/home/bo/images/promos/app-store-squad-busters/promo_app_store_sb__b8zuxx50qely_medium.jpg')];
+  }
+  .serviceBox.box06{
+    @apply !bg-[url('https://www.apple.com/v/home/bo/images/promos/iphone-tradein/promo_iphone_tradein__bugw15ka691e_medium.jpg')];
+  }
+}
+@media (max-width: 734px) {
+  .landingService{
+    @apply !grid-cols-1;
+  }
+  .serviceBox{
+    @apply !p-[30px];
+  }
+  .serviceBox .title {
+    @apply !text-[32px];
+  }
+  .serviceBox .txt{
+    @apply !text-[19px];
+  }
+  .serviceBox.box01{
+    @apply !bg-[url('https://www.apple.com/v/home/bo/images/promos/college-students/promo_college_students__bxqdcoxgjzw2_small.jpg')];
+  }
+  .serviceBox.box02{
+    @apply !bg-[url('https://www.apple.com/v/home/bo/images/promos/macbook-air-m3/promo_macbook_air_m3__e43jegok3wuq_small.jpg')];
+  }
+  .serviceBox.box03{
+    @apply !bg-[url('https://www.apple.com/kr/home/bo/images/promos/apple-watch-series-9/promo_apple_watch_series_9_order__b3u85rm9zf6u_small.jpg')];
+  }
+  .serviceBox.box04{
+    @apply !bg-[url('https://www.apple.com/v/home/bo/images/promos/ipad-air/promo_ipadair__cu1bnxi7uuwm_small.jpg')];
+  }
+  .serviceBox.box05{
+    @apply !bg-[url('https://www.apple.com/v/home/bo/images/promos/app-store-squad-busters/promo_app_store_sb__b8zuxx50qely_small.jpg')];
+  }
+  .serviceBox.box06{
+    @apply !bg-[url('https://www.apple.com/v/home/bo/images/promos/iphone-tradein/promo_iphone_tradein__bugw15ka691e_small.jpg')];
+  }
 }
 </style>
