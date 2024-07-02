@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* font */
-* { font-family: 'Pretendard', 'sans-serif' !important; }
-/* font */
-
 /* reset */
-* {
-  box-sizing: border-box;
-}
+* { font-family: 'Pretendard', 'sans-serif' !important; box-sizing: border-box; }
 /* reset */
