@@ -7,6 +7,7 @@
       :idx="idx"
     />
     <LandingService />
+    <LandingSwiper />
   </div>
 </template>
 
