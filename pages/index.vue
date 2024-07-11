@@ -8,6 +8,7 @@
     />
     <LandingService />
     <LandingSwiper />
+    <LandingFooter />
   </div>
 </template>
 

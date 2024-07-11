@@ -5,3 +5,7 @@
 /* reset */
 * { font-family: 'Pretendard', 'sans-serif' !important; box-sizing: border-box; }
 /* reset */
+
+.swiper-pagination-bullet-active{
+  @apply bg-[#161617]
+}

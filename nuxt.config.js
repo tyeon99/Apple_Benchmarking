@@ -38,10 +38,12 @@ export default {
   ],
 
   tailwindcss: {
-    cssPath: '~/assets/css/style.css',
+    cssPath: [
+      '~/assets/css/style.css',
+      { injectPosition: 0 }
+    ],
     configPath: 'tailwind.config',
     exposeConfig: false,
-    injectPosition: 0,
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
