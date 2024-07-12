@@ -115,6 +115,14 @@ export default {
         clickable: true
       },
       on: {
+        init: function() {
+          if (!sessionStorage.getItem('swiperInitialized')) {
+            sessionStorage.setItem('swiperInitialized', 'true');
+            window.location.reload();
+          } else {
+            sessionStorage.removeItem('swiperInitialized');
+          }
+        },
         slideChange: function() {
           this.slides.forEach(slide => {
             const txtElement = slide.querySelector('.txt');
