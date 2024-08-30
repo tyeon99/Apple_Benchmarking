@@ -412,10 +412,13 @@ export default {
   @apply sticky top-0 w-full z-[9999];
 }
 .globalHeader{
-  @apply bg-[#fff] relative;
+  @apply bg-[#fafafc] relative;
 }
 .darkHeader .globalHeader {
   @apply bg-[#161617] relative;
+}
+.grayHeader .globalHeader {
+  @apply bg-[#f5f5f7]
 }
 .globalnav-content{
   @apply m-[0_auto] w-full max-w-[1024px] p-[0px_16px];
@@ -445,11 +448,14 @@ export default {
   transition: all 0.3s ease-in-out;
 }
 .show-dropdown .dropdown-menu {
-  @apply bg-[#fff] w-full;
+  @apply bg-[#fafafc] w-full;
   max-height: 500px;
 }
 .darkHeader .show-dropdown .dropdown-menu{
   @apply bg-[#161617];
+}
+.grayHeader .show-dropdown .dropdown-menu{
+  @apply bg-[#f5f5f7];
 }
 .dropdown-content{
   @apply m-[0px_auto] w-full max-w-[1024px] p-[30px_20px] flex justify-start items-start gap-[40px];
@@ -470,7 +476,7 @@ export default {
   @apply text-[14px] leading-[30px];
 }
 .darkHeader .drpdn-sub ul li{
-  @apply text-[#fff];
+  @apply text-[#fafafc];
 }
 .fade-enter-active, .fade-leave-active {
   transition: all 0.3s ease-in-out, transform 0.3s ease-in-out;
@@ -500,7 +506,7 @@ export default {
   @apply text-[#000] font-bold text-[14px] leading-[24px];
 }
 .darkHeader .drpdn-search .search-link button span, .darkHeader .drpdn-cart .cart-title, .darkHeader .drpdn-cart .profile-list{
-  @apply text-[#fff];
+  @apply text-[#fafafc];
 }
 .drpdn-cart .cart-title{
   @apply text-[#000] font-bold text-[30px] leading-[38px] mb-[30px];
@@ -524,7 +530,7 @@ export default {
   @apply !text-[28px] !font-bold !text-[#1d1d1f] !h-[50px] !w-full text-left;
 }
 .darkHeader .drpdn-minMenu button{
-  @apply !text-[#fff];
+  @apply !text-[#fafafc];
 }
 .min-menu .dropdown-menu{
   @apply !max-h-[100vh] !h-[100vh];

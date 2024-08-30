@@ -1,6 +1,9 @@
 <template>
   <div id="wrap">
-    <GlobalHeader :class="{ 'darkHeader': addHeaderClass }" @toggleDropdown="toggleDropdown" />
+    <GlobalHeader 
+      :class="{ 'darkHeader': addHeaderClass, 'grayHeader': gyHeaderClass }"  
+      @toggleDropdown="toggleDropdown" 
+    />
     <div ref="Top"></div>
     <div id="content" :class="{ 'blur': isDropdownOpen }">
       <Nuxt />
@@ -16,6 +19,9 @@ export default{
   computed: {
     addHeaderClass() {
       return this.$route.matched.some(record => record.components.default.options.data && record.components.default.options.data().addHeaderClass);
+    },
+    gyHeaderClass() {
+      return this.$route.matched.some(record => record.components.default.options.data && record.components.default.options.data().gyHeaderClass);
     }
   },
   watch: {
